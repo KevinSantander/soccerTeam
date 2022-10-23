@@ -99,6 +99,29 @@ class Massagist  extends Person {
   
 }
 
+class SoccerTeam {
+  private players: Player[];
+  private massagist: Massagist;
+  private coach: Coach;
+
+  public constructor(pPlayers: Player[], pMassagist: Massagist, pCoach: Coach) {
+    this.players = pPlayers;
+    this.massagist = pMassagist;
+    this.coach = pCoach;
+  }
+
+  public getPlayers(): Player[] {
+    return this.players;
+  }
+
+  public setPlayers(paramPlayer: Player): void {
+    this.players.push(paramPlayer);
+  }
+
+}
+
+
+
 let player1 = new Player('derecho','central','Kevin',176,66);
 let player2 = new Player('derecho','delanter','Pedro',178,70);
 let player3 = new Player('izquierdo','lateral','Fernando',184,79);
@@ -110,21 +133,11 @@ let player8 = new Player('izquierdo','defensor','Eduardo',180,77);
 let player9 = new Player('derecho','defensor','Raul',183,79);
 let player10 = new Player('izquierdo','defensor','Juan',185,80);
 let player11 = new Player('ambidiestro','arquero','Diego',198,90);
+let coach = new Coach(25,'Riquelme',180,78);
+let massagist = new Massagist(654321,'lucas',188,80);
 
 let playerSquad:Player[]  = [player1,player2,player3,player4,player5,player6,player7,player8,player9,player10,player11];
-
-let coachExperience = new Coach(25,'Riquelme',180,78);
-
-let registrationNumber = new Massagist(654321,'lucas',188,80);
-
-console.log(playerSquad,coachExperience,registrationNumber);
+let soccerTeam = new SoccerTeam(playerSquad,massagist,coach);
 
 
-
-
-
-
-
-
-
-
+console.log(soccerTeam);
