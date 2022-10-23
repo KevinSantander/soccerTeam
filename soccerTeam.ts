@@ -3,33 +3,33 @@ class Person {
   private height: number;
   private weight: number;
 
-  public constructor(pName:string, pHeight:number, pWeight:number) {
+  public constructor(pName: string, pHeight: number, pWeight: number) {
     this.name = pName;
     this.height = pHeight;
     this.weight = pWeight;
   }
 
-  public getNamesOfTheMembers(): string {
+  public getName(): string {
     return this.name;
   }
 
-  public setNameOfTheMembers(paramName:string): void {
+  public setName(paramName: string): void {
     this.name = paramName;
   }
 
-  public getHeightPerson():number {
+  public getHeight(): number {
     return this.height;
   }
 
-  public setHeightPerson(paramHeight:number): void {
+  public setHeight(paramHeight: number): void {
     this.height = paramHeight;
   }
 
-  public getWeightPerson(): number {
+  public getWeight(): number {
     return this.weight;
   }
 
-  public setWeightPerson(paramWeight: number):void {
+  public setWeight(paramWeight: number): void {
     this.weight = paramWeight;
   }
 
@@ -38,8 +38,8 @@ class Person {
 class Coach extends Person {
   private experience: number;
 
-  public constructor(pExperience: number,pName:string, pHeight:number, pWeight:number) {
-    super(pName,pHeight,pWeight)
+  public constructor(pExperience: number, pName:string, pHeight:number, pWeight:number) {
+    super(pName, pHeight, pWeight)
     this.experience = pExperience;
   }
 
@@ -57,7 +57,7 @@ class Player extends Person {
   private skillfullLeg: string;
   private position: string;
 
-  public constructor(pSkillfullLeg:string, pPosition: string, pName:string, pHeight:number, pWeight:number) {
+  public constructor(pSkillfullLeg: string, pPosition: string, pName: string, pHeight: number, pWeight: number) {
     super(pName,pHeight,pWeight)
     this.skillfullLeg = pSkillfullLeg;
     this.position = pPosition;
@@ -71,21 +71,21 @@ class Player extends Person {
     this.skillfullLeg = paramSkill;
   }
 
-  public ChoosePosition():string {
+  public getPosition(): string {
     return  this.position;
   }
 
-  public confirmedPosition(paramPosition: string): void {
+  public setPosition(paramPosition: string): void {
     this.position = paramPosition;
   }
   
 }
 
-class Massagist  extends Person {
+class Massagist extends Person {
   private licenseNumber: number;
 
-  public constructor(pLicenseNumber: number, pName:string, pHeight:number, pWeight:number) {
-    super(pName,pHeight,pWeight)
+  public constructor(pLicenseNumber: number, pName: string, pHeight: number, pWeight: number) {
+    super(pName, pHeight, pWeight)
     this.licenseNumber = pLicenseNumber;
   }
 

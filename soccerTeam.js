@@ -91,6 +91,20 @@ var Massagist = /** @class */ (function (_super) {
     };
     return Massagist;
 }(Person));
+var SoccerTeam = /** @class */ (function () {
+    function SoccerTeam(pPlayers, pMassagist, pCoach) {
+        this.players = pPlayers;
+        this.massagist = pMassagist;
+        this.coach = pCoach;
+    }
+    SoccerTeam.prototype.getPlayers = function () {
+        return this.players;
+    };
+    SoccerTeam.prototype.setPlayers = function (paramPlayer) {
+        this.players.push(paramPlayer);
+    };
+    return SoccerTeam;
+}());
 var player1 = new Player('derecho', 'central', 'Kevin', 176, 66);
 var player2 = new Player('derecho', 'delanter', 'Pedro', 178, 70);
 var player3 = new Player('izquierdo', 'lateral', 'Fernando', 184, 79);
@@ -103,6 +117,7 @@ var player9 = new Player('derecho', 'defensor', 'Raul', 183, 79);
 var player10 = new Player('izquierdo', 'defensor', 'Juan', 185, 80);
 var player11 = new Player('ambidiestro', 'arquero', 'Diego', 198, 90);
 var playerSquad = [player1, player2, player3, player4, player5, player6, player7, player8, player9, player10, player11];
-var coachExperience = new Coach(25, 'Riquelme', 180, 78);
-var registrationNumber = new Massagist(654321, 'lucas', 188, 80);
-console.log(playerSquad, coachExperience, registrationNumber);
+var coach = new Coach(25, 'Riquelme', 180, 78);
+var massagist = new Massagist(654321, 'lucas', 188, 80);
+var soccerTeam = new SoccerTeam(playerSquad, massagist, coach);
+console.log(soccerTeam);
